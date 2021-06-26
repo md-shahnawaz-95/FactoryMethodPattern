@@ -1,4 +1,4 @@
-# FactoryMethodPattern
+# Factory Method Pattern
 This is a repository for explaining about the Factory Method pattern.
 
 # Definition
