@@ -6,18 +6,16 @@ import com.product.Dog;
 import com.product.Duck;
 
 public class BalancedAnimal extends AnimalFactory{
-    Animal animal;
-
+    
     @Override
     public Animal createAnimal(String type) {
         if (type.equals("Cat")){
-            animal = new Cat();
+            return new Cat();
         }else if (type.equals("Dog")){
-            animal = new Dog();
+            return new Dog();
         }else if (type.equals("Duck")){
-            animal = new Duck();
-        }else animal = null;
-        return animal;
+            return new Duck();
+        }else return null;
     }
     
 }

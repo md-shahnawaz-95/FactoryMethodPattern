@@ -4,7 +4,8 @@ import com.product.Animal;
 
 public abstract class AnimalFactory {
     public Animal spawnAnimals(String type){
-        return createAnimal(type);
+        Animal animal = createAnimal(type);
+        return animal;
     }
     public abstract Animal createAnimal(String type);
 }
