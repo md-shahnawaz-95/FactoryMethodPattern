@@ -9,10 +9,10 @@ import com.product.Dog;
 import com.product.Duck;
 
 public class BalancedAnimal extends AnimalFactory{
+    List<Animal> animals = new ArrayList<>();
 
     @Override
     public List<Animal> createAnimal() {
-        List<Animal> animals = new ArrayList<Animal>();
         animals.add(new Cat());
         animals.add(new Dog());
         animals.add(new Duck());
