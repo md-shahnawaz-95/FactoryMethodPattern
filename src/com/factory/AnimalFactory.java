@@ -1,12 +1,10 @@
 package com.factory;
 
-import java.util.List;
-
 import com.product.Animal;
 
 public abstract class AnimalFactory {
-    public List<Animal> spawnAnimals(){
-        return createAnimal();
+    public Animal spawnAnimals(String type){
+        return createAnimal(type);
     }
-    public abstract List<Animal> createAnimal();
+    public abstract Animal createAnimal(String type);
 }

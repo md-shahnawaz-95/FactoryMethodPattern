@@ -1,22 +1,23 @@
 package com.factory;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.product.Animal;
 import com.product.Cat;
 import com.product.Dog;
 import com.product.Duck;
 
 public class BalancedAnimal extends AnimalFactory{
-    List<Animal> animals = new ArrayList<>();
+    Animal animal;
 
     @Override
-    public List<Animal> createAnimal() {
-        animals.add(new Cat());
-        animals.add(new Dog());
-        animals.add(new Duck());
-        return animals;
+    public Animal createAnimal(String type) {
+        if (type.equals("Cat")){
+            animal = new Cat();
+        }else if (type.equals("Dog")){
+            animal = new Dog();
+        }else if (type.equals("Duck")){
+            animal = new Duck();
+        }else animal = null;
+        return animal;
     }
     
 }
